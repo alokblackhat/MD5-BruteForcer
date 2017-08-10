@@ -1,11 +1,11 @@
-print "ONLY FOR ILLEAGLE PURPOSE!\n" 
+print "ONLY FOR LEGAL PURPOSE!\n" 
 
 import md5
 
 counter = 1
 
-pass_in = raw_input("please enter the hash")
-pwfile = raw_input("Pass file name:")
+pass_in = raw_input("PLEASE ENTER YOUR MD5 HASH:")
+pwfile = raw_input("PATH TO YOUR BRUTE-FORCE DICTIONARY:")
 
 try:
 
@@ -16,12 +16,12 @@ except:
 
 for password in pwfile:
 	filemd5 = md5.new(password.strip()).hexdigest()
-	print "trying pass number %d: %s " % (counter, password.strip())
+	print "TRYING PASSWORD NUMBER %d: %s " % (counter, password.strip())
 
 	counter += 1
 
 	if pass_in == filemd5:
-		print "\nmatch found. \npassword is: %s" % password
+		print "\nPASSWORD CRACKED. \nPASSWORD IS: %s" % password
 	 	break
 
-else: print "\npass not found"
+else: print "\nPASSWORD NOT FOUND!"
